@@ -88,7 +88,7 @@ mp.events.add("client::task:taskGetOffBoat", (boat: number) => {
 mp.events.add("client::task:taskGoStraightToCoord", (x: number, y: number, z: number, speed: number, timeout: number, targetHeading: number, distanceToSlide: number) => {
     mp.players.local.taskGoStraightToCoord(x, y, z, speed, timeout, targetHeading, distanceToSlide);
 });
-mp.events.add("client::task:taskGotoAiming", (targetid: Handle, distanceToStopAt: number, StartAimingDist: number) => {
+mp.events.add("client::task:taskGotoAiming", (targetid: number, distanceToStopAt: number, StartAimingDist: number) => {
     const target = mp.players.atRemoteId(targetid);
     if (!target || !mp.players.exists(target)) return;
     mp.players.local.taskGotoAiming(target.handle, distanceToStopAt, StartAimingDist);
@@ -115,7 +115,9 @@ mp.events.add("client::task:taskGuardSphereDefensiveArea", (p1: number, p2: numb
     mp.players.local.taskGuardSphereDefensiveArea(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10);
 });
 mp.events.add("client::task:taskHandsUp", (duration: number, facingPed: Handle, p3: number, p4: boolean) => {
-    mp.players.local.taskHandsUp(duration, facingPed, p3, p4);
+    const targetPlayer = mp.players.atRemoteId(facingPed);
+    if (!targetPlayer || !mp.players.exists(targetPlayer)) return;
+    mp.players.local.taskHandsUp(duration, targetPlayer.handle, p3, p4);
 });
 mp.events.add("client::task:taskHeliChase", (targetid: number, x: number, y: number, z: number) => {
     const target = mp.players.atRemoteId(targetid);
