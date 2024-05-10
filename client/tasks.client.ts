@@ -6,6 +6,7 @@ mp.events.add("client::task:taskAimGunAt", (entity: number, duration: number, p3
     if (!target || !mp.players.exists(target)) return;
     mp.players.local.taskAimGunAt(target.handle, duration, p3);
 });
+
 mp.events.add("client::task:taskAimGunAtCoord", (x: number, y: number, z: number, time: number, p5: boolean, p6: boolean) => {
     mp.players.local.taskAimGunAtCoord(x, y, z, time, p5, p6);
 });
@@ -38,8 +39,10 @@ mp.events.add("client::task:taskClimb", (unused: boolean) => {
 mp.events.add("client::task:taskClimbLadder", (p1: number) => {
     mp.players.local.taskClimbLadder(p1);
 });
-mp.events.add("client::task:taskCombat", (targetPed: Handle, p2: number, p3: number) => {
-    mp.players.local.taskCombat(targetPed, p2, p3);
+mp.events.add("client::task:taskCombat", (targetPed: number, p2: number, p3: number) => {
+    const target = mp.players.atRemoteId(targetPed);
+    if (!target || !mp.players.exists(target)) return;
+    mp.players.local.taskCombat(target.handle, p2, p3);
 });
 mp.events.add("client::task:taskCombatHatedTargetsAround", (radius: number, p2: number) => {
     mp.players.local.taskCombatHatedTargetsAround(radius, p2);
