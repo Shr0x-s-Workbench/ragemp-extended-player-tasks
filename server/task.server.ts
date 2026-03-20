@@ -1,427 +1,223 @@
-mp.Player.prototype.taskAchieveHeading = function (heading: number, timeout: number) {
-    this.call("client::task:taskAchieveHeading", [heading, timeout]);
-};
-
-mp.Player.prototype.taskAimGunAt = function (entity: number, duration: number, p3: boolean) {
-    this.call("client::task:taskAimGunAt", [entity, duration, p3]);
-};
-
-mp.Player.prototype.taskAimGunAtCoord = function (x: number, y: number, z: number, time: number, p5: boolean, p6: boolean) {
-    this.call("client::task:taskAimGunAtCoord", [x, y, z, time, p5, p6]);
-};
-
-mp.Player.prototype.taskAimGunScripted = function (scriptTask: number, p2: boolean, p3: boolean) {
-    this.call("client::task:taskAimGunScripted", [scriptTask, p2, p3]);
-};
-
-mp.Player.prototype.taskArrest = function (target: number) {
-    this.call("client::task:taskArrest", [target]);
-};
-
-mp.Player.prototype.taskBoatMission = function (boat: number, p2: any, p3: any, x: number, y: number, z: number, p7: any, maxSpeed: number, p9: any, p10: number, p11: any) {
-    this.call("client::task:taskBoatMission", [boat, p2, p3, x, y, z, p7, maxSpeed, p9, p10, p11]);
-};
-
-mp.Player.prototype.taskChatTo = function (target: number, p2: any, p3: number, p4: number, p5: number, p6: number, p7: number) {
-    this.call("client::task:taskChatTo", [target, p2, p3, p4, p5, p6, p7]);
-};
-
-mp.Player.prototype.taskClearLookAt = function () {
-    this.call("client::task:taskClearLookAt", []);
-};
-
-mp.Player.prototype.taskClimb = function (unused: boolean) {
-    this.call("client::task:taskClimb", [unused]);
-};
-
-mp.Player.prototype.taskClimbLadder = function (p1: number) {
-    this.call("client::task:taskClimbLadder", [p1]);
-};
-
-mp.Player.prototype.taskCombat = function (targetPed: number, p2: number, p3: number) {
-    this.call("client::task:taskCombat", [targetPed, p2, p3]);
-};
-
-mp.Player.prototype.taskCombatHatedTargetsAround = function (radius: number, p2: number) {
-    this.call("client::task:taskCombatHatedTargetsAround", [radius, p2]);
-};
-
-mp.Player.prototype.taskCombatHatedTargetsInArea = function (x: number, y: number, z: number, radius: number, p5: any) {
-    this.call("client::task:taskCombatHatedTargetsInArea", [x, y, z, radius, p5]);
-};
-
-mp.Player.prototype.taskCower = function (duration: number) {
-    this.call("client::task:taskCower", [duration]);
-};
-
-mp.Player.prototype.taskDriveBy = function (targetPed: number, p2: any, targetX: number, targetY: number, targetZ: number, p6: number, p7: any, p8: boolean, firingPattern: number) {
-    this.call("client::task:taskDriveBy", [targetPed, p2, targetX, targetY, targetZ, p6, p7, p8, firingPattern]);
-};
-
-mp.Player.prototype.taskEnterVehicle = function (vehicle: number, timeout: number, seat: number, speed: number, p5: number, p6: any) {
-    this.call("client::task:taskEnterVehicle", [vehicle, timeout, seat, speed, p5, p6]);
-};
-
-mp.Player.prototype.taskFollowNavMeshToCoord = function (x: number, y: number, z: number, speed: number, timeout: number, stoppingRange: number, persistFollowing: boolean, unk: number) {
-    this.call("client::task:taskFollowNavMeshToCoord", [x, y, z, speed, timeout, stoppingRange, persistFollowing, unk]);
-};
-
-mp.Player.prototype.taskFollowNavMeshToCoordAdvanced = function (x: number, y: number, z: number, speed: number, timeout: number, unkFloat: number, unkInt: number, unkX: number, unkY: number, unkZ: number, unk2: number) {
-    this.call("client::task:taskFollowNavMeshToCoordAdvanced", [x, y, z, speed, timeout, unkFloat, unkInt, unkX, unkY, unkZ, unk2]);
-};
-
-mp.Player.prototype.taskFollowPointRoute = function (speed: number, unknown: number) {
-    this.call("client::task:taskFollowPointRoute", [speed, unknown]);
-};
-
-mp.Player.prototype.taskFollowToOffsetOf = function (entity: number, offsetX: number, offsetY: number, offsetZ: number, movementSpeed: number, timeout: number, stoppingRange: number, persistFollowing: boolean) {
-    this.call("client::task:taskFollowToOffsetOf", [entity, offsetX, offsetY, offsetZ, movementSpeed, timeout, stoppingRange, persistFollowing]);
-};
-
-mp.Player.prototype.taskForceMotionState = function (state: number, p2: boolean) {
-    this.call("client::task:taskForceMotionState", [state, p2]);
-};
-
-mp.Player.prototype.taskGetOffBoat = function (boat: number) {
-    this.call("client::task:taskGetOffBoat", [boat]);
-};
-
-mp.Player.prototype.taskGoStraightToCoord = function (x: number, y: number, z: number, speed: number, timeout: number, targetHeading: number, distanceToSlide: number) {
-    this.call("client::task:taskGoStraightToCoord", [x, y, z, speed, timeout, targetHeading, distanceToSlide]);
-};
-
-mp.Player.prototype.taskGotoAiming = function (target: number, distanceToStopAt: number, StartAimingDist: number) {
-    this.call("client::task:taskGotoAiming", [target, distanceToStopAt, StartAimingDist]);
-};
-
-mp.Player.prototype.taskGoToCoordAndAimAtHatedEntitiesNearCoord = function (gotoX: number, gotoY: number, gotoZ: number, aimNearX: number, aimNearY: number, aimNearZ: number, speed: number, shoot: boolean, unknown1: number, unknown2: number, unkTrue: boolean, unknown3: number, heading: boolean, firingPattern: number) {
-    this.call("client::task:taskGoToCoordAndAimAtHatedEntitiesNearCoord", [gotoX, gotoY, gotoZ, aimNearX, aimNearY, aimNearZ, speed, shoot, unknown1, unknown2, unkTrue, unknown3, heading, firingPattern]);
-};
-
-mp.Player.prototype.taskGoToCoordAnyMeans = function (x: number, y: number, z: number, speed: number, p5: any, p6: boolean, walkingStyle: number, p8: number) {
-    this.call("client::task:taskGoToCoordAnyMeans", [x, y, z, speed, p5, p6, walkingStyle, p8]);
-};
+type TaskMap = {
+    taskAchieveHeading: [heading: number, timeout: number];
 
-mp.Player.prototype.taskGoToCoordAnyMeansExtraParams = function (x: number, y: number, z: number, speed: number, p5: any, p6: boolean, walkingStyle: number, p8: number, p9: any, p10: any, p11: any) {
-    this.call("client::task:taskGoToCoordAnyMeansExtraParams", [x, y, z, speed, p5, p6, walkingStyle, p8, p9, p10, p11]);
-};
+    taskAimGunAt: [targetEntity: number, duration: number, instantBlend: boolean];
+    taskAimGunAtCoord: [x: number, y: number, z: number, duration: number, instantBlend: boolean, useAlternate: boolean];
+    taskAimGunScripted: [scriptTask: number, disableIdle: boolean, instantBlend: boolean];
 
-mp.Player.prototype.taskGoToCoordAnyMeansExtraParamsWithCruiseSpeed = function (x: number, y: number, z: number, speed: number, p5: any, p6: boolean, walkingStyle: number, p8: number, p9: any, p10: any, p11: any, p12: any) {
-    this.call("client::task:taskGoToCoordAnyMeansExtraParamsWithCruiseSpeed", [x, y, z, speed, p5, p6, walkingStyle, p8, p9, p10, p11, p12]);
-};
+    taskArrest: [target: number];
 
-mp.Player.prototype.taskGoToCoordWhileAimingAtCoord = function (x: number, y: number, z: number, aimAtX: number, aimAtY: number, aimAtZ: number, moveSpeed: number, p8: boolean, p9: number, p10: number, p11: boolean, flags: any, p13: boolean, firingPattern: number) {
-    this.call("client::task:taskGoToCoordWhileAimingAtCoord", [x, y, z, aimAtX, aimAtY, aimAtZ, moveSpeed, p8, p9, p10, p11, flags, p13, firingPattern]);
-};
+    taskBoatMission: [boat: number, p2: any, p3: any, x: number, y: number, z: number, missionType: any, maxSpeed: number, p9: any, p10: number, p11: any];
 
-mp.Player.prototype.taskGuardCurrentPosition = function (p1: number, p2: number, p3: number) {
-    this.call("client::task:taskGuardCurrentPosition", [p1, p2, p3]);
-};
+    taskChatTo: [target: number, p2: any, duration: number, p4: number, p5: number, p6: number, p7: number];
 
-mp.Player.prototype.taskGuardSphereDefensiveArea = function (p1: number, p2: number, p3: number, p4: number, p5: number, p6: any, p7: number, p8: number, p9: number, p10: number) {
-    this.call("client::task:taskGuardSphereDefensiveArea", [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10]);
-};
+    taskClearLookAt: [];
 
-mp.Player.prototype.taskHandsUp = function (duration: number, facingPed: number, p3: number, p4: boolean) {
-    this.call("client::task:taskHandsUp", [duration, facingPed, p3, p4]);
-};
+    taskClimb: [unused: boolean];
+    taskClimbLadder: [style: number];
 
-mp.Player.prototype.taskHeliChase = function (entityToFollow: number, x: number, y: number, z: number) {
-    this.call("client::task:taskHeliChase", [entityToFollow, x, y, z]);
-};
+    taskCombat: [targetPed: number, combatFlags: number, threatResponse: number];
+    taskCombatHatedTargetsAround: [radius: number, flags: number];
+    taskCombatHatedTargetsInArea: [x: number, y: number, z: number, radius: number, flags: any];
 
-mp.Player.prototype.taskHeliMission = function (vehicle: number, p2: any, pedToFollow: number, posX: number, posY: number, posZ: number, mode: number, speed: number, radius: number, angle: number, p11: number, height: number, p13: number, p14: number) {
-    this.call("client::task:taskHeliMission", [vehicle, p2, pedToFollow, posX, posY, posZ, mode, speed, radius, angle, p11, height, p13, p14]);
-};
+    taskCower: [duration: number];
 
-mp.Player.prototype.taskJump = function (unused: boolean, flag1: boolean, flag2: boolean) {
-    this.call("client::task:taskJump", [unused, flag1, flag2]);
-};
+    taskDriveBy: [targetPed: number, p2: any, x: number, y: number, z: number, p6: number, p7: any, shoot: boolean, firingPattern: number];
 
-mp.Player.prototype.taskLeaveAnyVehicle = function (p1: number, p2: number) {
-    this.call("client::task:taskLeaveAnyVehicle", [p1, p2]);
-};
+    taskEnterVehicle: [vehicle: number, timeout: number, seat: number, speed: number, flag: number, p6: any];
 
-mp.Player.prototype.taskLeaveVehicle = function (vehicle: number, flags: number) {
-    this.call("client::task:taskLeaveVehicle", [vehicle, flags]);
-};
+    taskFollowNavMeshToCoord: [x: number, y: number, z: number, speed: number, timeout: number, stoppingRange: number, persist: boolean, flags: number];
+    taskFollowNavMeshToCoordAdvanced: [x: number, y: number, z: number, speed: number, timeout: number, unkFloat: number, unkInt: number, unkX: number, unkY: number, unkZ: number, flags: number];
 
-mp.Player.prototype.taskLookAt = function (lookAt: number, duration: number, unknown1: number, unknown2: number) {
-    this.call("client::task:taskLookAt", [lookAt, duration, unknown1, unknown2]);
-};
+    taskFollowPointRoute: [speed: number, mode: number];
 
-mp.Player.prototype.taskMoveNetwork = function (task: string, multiplier: number, p3: boolean, animDict: string, flags: number) {
-    this.call("client::task:taskMoveNetwork", [task, multiplier, p3, animDict, flags]);
-};
+    taskFollowToOffsetOf: [entity: number, offsetX: number, offsetY: number, offsetZ: number, speed: number, timeout: number, stoppingRange: number, persist: boolean];
 
-mp.Player.prototype.taskMoveNetworkAdvanced = function (p1: string, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: any, p9: number, p10: boolean, animDict: string, flags: number) {
-    this.call("client::task:taskMoveNetworkAdvanced", [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, animDict, flags]);
-};
+    taskForceMotionState: [state: number, instant: boolean];
 
-mp.Player.prototype.taskOpenVehicleDoor = function (vehicle: number, timeOut: number, doorIndex: number, speed: number) {
-    this.call("client::task:taskOpenVehicleDoor", [vehicle, timeOut, doorIndex, speed]);
-};
+    taskGetOffBoat: [boat: number];
 
-mp.Player.prototype.taskParachute = function (p1: boolean) {
-    this.call("client::task:taskParachute", [p1]);
-};
+    taskGoStraightToCoord: [x: number, y: number, z: number, speed: number, timeout: number, heading: number, distanceToSlide: number];
 
-mp.Player.prototype.taskParachuteToTarget = function (x: number, y: number, z: number) {
-    this.call("client::task:taskParachuteToTarget", [x, y, z]);
-};
+    taskGotoAiming: [target: number, stopDistance: number, startAimDistance: number];
 
-mp.Player.prototype.taskPatrol = function (p1: string, p2: any, p3: boolean, p4: boolean) {
-    this.call("client::task:taskPatrol", [p1, p2, p3, p4]);
-};
+    taskGoToCoordAndAimAtHatedEntitiesNearCoord: [
+        gotoX: number, gotoY: number, gotoZ: number,
+        aimX: number, aimY: number, aimZ: number,
+        speed: number, shoot: boolean,
+        p9: number, p10: number, p11: boolean,
+        p12: number, useHeading: boolean,
+        firingPattern: number
+    ];
 
-mp.Player.prototype.taskPause = function (ms: number) {
-    this.call("client::task:taskPause", [ms]);
-};
+    taskGoToCoordAnyMeans: [x: number, y: number, z: number, speed: number, vehicle: any, useLongRange: boolean, walkingStyle: number, flags: number];
+    taskGoToCoordAnyMeansExtraParams: [x: number, y: number, z: number, speed: number, vehicle: any, useLongRange: boolean, walkingStyle: number, flags: number, p9: any, p10: any, p11: any];
+    taskGoToCoordAnyMeansExtraParamsWithCruiseSpeed: [x: number, y: number, z: number, speed: number, vehicle: any, useLongRange: boolean, walkingStyle: number, flags: number, p9: any, p10: any, p11: any, cruiseSpeed: any];
 
-mp.Player.prototype.taskPerformSequence = function (taskSequence: number) {
-    this.call("client::task:taskPerformSequence", [taskSequence]);
-};
+    taskGoToCoordWhileAimingAtCoord: [
+        x: number, y: number, z: number,
+        aimX: number, aimY: number, aimZ: number,
+        speed: number, shoot: boolean,
+        p9: number, p10: number, p11: boolean,
+        flags: any, p13: boolean,
+        firingPattern: number
+    ];
 
-mp.Player.prototype.taskPlaneChase = function (entityToFollow: number, x: number, y: number, z: number) {
-    this.call("client::task:taskPlaneChase", [entityToFollow, x, y, z]);
-};
+    taskGuardCurrentPosition: [radius: number, duration: number, p3: number];
 
-mp.Player.prototype.taskPlaneLand = function (plane: number, runwayStartX: number, runwayStartY: number, runwayStartZ: number, runwayEndX: number, runwayEndY: number, runwayEndZ: number) {
-    this.call("client::task:taskPlaneLand", [plane, runwayStartX, runwayStartY, runwayStartZ, runwayEndX, runwayEndY, runwayEndZ]);
-};
+    taskGuardSphereDefensiveArea: [x: number, y: number, z: number, radius: number, p5: number, p6: any, p7: number, p8: number, p9: number, p10: number];
 
-mp.Player.prototype.taskPlaneMission = function (plane: number, targetVehicle: number, targetPed: number, destinationX: number, destinationY: number, destinationZ: number, p7: number, physicsSpeed: number, p9: number, p10: number, maxAltitude: number, minAltitude: number) {
-    this.call("client::task:taskPlaneMission", [plane, targetVehicle, targetPed, destinationX, destinationY, destinationZ, p7, physicsSpeed, p9, p10, maxAltitude, minAltitude]);
-};
+    taskHandsUp: [duration: number, facingPed: number, flags: number, playAnim: boolean];
 
-mp.Player.prototype.taskPlantBomb = function (x: number, y: number, z: number, heading: number) {
-    this.call("client::task:taskPlantBomb", [x, y, z, heading]);
-};
+    taskHeliChase: [target: number, x: number, y: number, z: number];
+    taskHeliMission: [heli: number, p2: any, targetPed: number, x: number, y: number, z: number, mode: number, speed: number, radius: number, angle: number, p11: number, height: number, p13: number, p14: number];
 
-mp.Player.prototype.taskPlayAnim = function (animDictionary: string, animationName: string, speed: number, speedMultiplier: number, duration: number, flag: number, playbackRate: number, lockX: boolean, lockY: boolean, lockZ: boolean) {
-    this.call("client::task:taskPlayAnim", [animDictionary, animationName, speed, speedMultiplier, duration, flag, playbackRate, lockX, lockY, lockZ]);
-};
+    taskJump: [unused: boolean, ragdoll: boolean, climb: boolean];
 
-mp.Player.prototype.taskPlayAnimAdvanced = function (animDict: string, animName: string, posX: number, posY: number, posZ: number, rotX: number, rotY: number, rotZ: number, speed: number, speedMultiplier: number, duration: number, flag: any, animTime: number, p14: any, p15: any) {
-    this.call("client::task:taskPlayAnimAdvanced", [animDict, animName, posX, posY, posZ, rotX, rotY, rotZ, speed, speedMultiplier, duration, flag, animTime, p14, p15]);
-};
+    taskLeaveAnyVehicle: [flags: number, timeout: number];
+    taskLeaveVehicle: [vehicle: number, flags: number];
 
-mp.Player.prototype.taskPlayPhoneGestureAnimation = function (p1: any, p2: any, p3: any, p4: number, p5: number, p6: boolean, p7: boolean) {
-    this.call("client::task:taskPlayPhoneGestureAnimation", [p1, p2, p3, p4, p5, p6, p7]);
-};
+    taskLookAt: [target: number, duration: number, flags: number, priority: number];
 
-mp.Player.prototype.taskPutDirectlyIntoCover = function (x: number, y: number, z: number, timeout: any, p5: boolean, p6: number, p7: boolean, p8: boolean, p9: object, p10: boolean) {
-    this.call("client::task:taskPutDirectlyIntoCover", [x, y, z, timeout, p5, p6, p7, p8, p9, p10]);
-};
+    taskMoveNetwork: [task: string, multiplier: number, p3: boolean, animDict: string, flags: number];
+    taskMoveNetworkAdvanced: [task: string, x: number, y: number, z: number, rx: number, ry: number, rz: number, p8: any, p9: number, p10: boolean, animDict: string, flags: number];
 
-mp.Player.prototype.taskPutDirectlyIntoMelee = function (meleeTarget: number, p2: number, p3: number, p4: number, p5: boolean) {
-    this.call("client::task:taskPutDirectlyIntoMelee", [meleeTarget, p2, p3, p4, p5]);
-};
+    taskOpenVehicleDoor: [vehicle: number, timeout: number, doorIndex: number, speed: number];
 
-mp.Player.prototype.taskRappelFromHeli = function (p1: number) {
-    this.call("client::task:taskRappelFromHeli", [p1]);
-};
+    taskParachute: [force: boolean];
+    taskParachuteToTarget: [x: number, y: number, z: number];
 
-mp.Player.prototype.taskReactAndFlee = function (fleeTarget: number) {
-    this.call("client::task:taskReactAndFlee", [fleeTarget]);
-};
+    taskPatrol: [route: string, p2: any, repeat: boolean, p4: boolean];
 
-mp.Player.prototype.taskReloadWeapon = function (doReload: boolean) {
-    this.call("client::task:taskReloadWeapon", [doReload]);
-};
+    taskPause: [duration: number];
 
-mp.Player.prototype.taskScriptedAnimation = function (lowData: number, midData: number, highData: number, blendIn: number, blendOut: number) {
-    this.call("client::task:taskScriptedAnimation", [lowData, midData, highData, blendIn, blendOut]);
-};
+    taskPerformSequence: [sequenceId: number];
 
-mp.Player.prototype.taskSeekCoverFrom = function (target: number, duration: number, p3: boolean) {
-    this.call("client::task:taskSeekCoverFrom", [target, duration, p3]);
-};
+    taskPlaneChase: [target: number, x: number, y: number, z: number];
+    taskPlaneLand: [plane: number, startX: number, startY: number, startZ: number, endX: number, endY: number, endZ: number];
+    taskPlaneMission: [plane: number, targetVehicle: number, targetPed: number, x: number, y: number, z: number, mode: number, speed: number, p9: number, p10: number, maxAlt: number, minAlt: number];
 
-mp.Player.prototype.taskSeekCoverToCoords = function (x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, p7: any, p8: boolean) {
-    this.call("client::task:taskSeekCoverToCoords", [x1, y1, z1, x2, y2, z2, p7, p8]);
-};
+    taskPlantBomb: [x: number, y: number, z: number, heading: number];
 
-mp.Player.prototype.taskSetBlockingOfNonTemporaryEvents = function (toggle: boolean) {
-    this.call("client::task:taskSetBlockingOfNonTemporaryEvents", [toggle]);
-};
+    taskPlayAnim: [dict: string, name: string, speed: number, speedMult: number, duration: number, flag: number, playbackRate: number, lockX: boolean, lockY: boolean, lockZ: boolean];
+    taskPlayAnimAdvanced: [dict: string, name: string, x: number, y: number, z: number, rx: number, ry: number, rz: number, speed: number, speedMult: number, duration: number, flag: any, animTime: number, p14: any, p15: any];
 
-mp.Player.prototype.taskSetDecisionMaker = function (p1: number) {
-    this.call("client::task:taskSetDecisionMaker", [p1]);
-};
+    taskPlayPhoneGestureAnimation: [p1: any, p2: any, p3: any, duration: number, flags: number, loop: boolean, holdLast: boolean];
 
-mp.Player.prototype.taskShockingEventReact = function (eventnumber: number) {
-    this.call("client::task:taskShockingEventReact", [eventnumber]);
-};
+    taskPutDirectlyIntoCover: [x: number, y: number, z: number, timeout: any, p5: boolean, p6: number, p7: boolean, p8: boolean, p9: object, p10: boolean];
+    taskPutDirectlyIntoMelee: [target: number, p2: number, p3: number, p4: number, p5: boolean];
 
-mp.Player.prototype.taskShootAtCoord = function (x: number, y: number, z: number, duration: number, firingPattern: number) {
-    this.call("client::task:taskShootAtCoord", [x, y, z, duration, firingPattern]);
-};
+    taskRappelFromHeli: [height: number];
 
-mp.Player.prototype.taskShuffleToNextVehicleSeat = function (vehicle: number) {
-    this.call("client::task:taskShuffleToNextVehicleSeat", [vehicle]);
-};
+    taskReactAndFlee: [target: number];
 
-mp.Player.prototype.taskSkyDive = function () {
-    this.call("client::task:taskSkyDive", []);
-};
+    taskReloadWeapon: [doReload: boolean];
 
-mp.Player.prototype.taskSlideToCoord = function (x: number, y: number, z: number, heading: number, speed: number) {
-    this.call("client::task:taskSlideToCoord", [x, y, z, heading, speed]);
-};
+    taskScriptedAnimation: [low: number, mid: number, high: number, blendIn: number, blendOut: number];
 
-mp.Player.prototype.taskSlideToCoordHdgRate = function (x: number, y: number, z: number, heading: number, speed: number, headingChangeRate: number) {
-    this.call("client::task:taskSlideToCoordHdgRate", [x, y, z, heading, speed, headingChangeRate]);
-};
+    taskSeekCoverFrom: [target: number, duration: number, preferFront: boolean];
+    taskSeekCoverToCoords: [x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: any, p8: boolean];
 
-mp.Player.prototype.taskSmartFlee = function (fleeTarget: number, distance: number, fleeTime: any, preferPavements: boolean, updateToNearestHatedPed: boolean) {
-    this.call("client::task:taskSmartFlee", [fleeTarget, distance, fleeTime, preferPavements, updateToNearestHatedPed]);
-};
+    taskSetBlockingOfNonTemporaryEvents: [toggle: boolean];
+    taskSetDecisionMaker: [decisionMaker: number];
 
-mp.Player.prototype.taskSmartFleeCoord = function (x: number, y: number, z: number, distance: number, time: number, preferPavements: boolean, quitIfOutOfRange: boolean) {
-    this.call("client::task:taskSmartFleeCoord", [x, y, z, distance, time, preferPavements, quitIfOutOfRange]);
-};
+    taskShockingEventReact: [eventId: number];
 
-mp.Player.prototype.taskStandGuard = function (x: number, y: number, z: number, heading: number, scenarioName: string) {
-    this.call("client::task:taskStandGuard", [x, y, z, heading, scenarioName]);
-};
+    taskShootAtCoord: [x: number, y: number, z: number, duration: number, firingPattern: number];
 
-mp.Player.prototype.taskStandStill = function (time: number) {
-    this.call("client::task:taskStandStill", [time]);
-};
+    taskShuffleToNextVehicleSeat: [vehicle: number];
 
-mp.Player.prototype.taskStartScenarioAtPosition = function (scenarioName: string, x: number, y: number, z: number, heading: number, duration: number, sittingScenario: boolean, teleport: boolean) {
-    this.call("client::task:taskStartScenarioAtPosition", [scenarioName, x, y, z, heading, duration, sittingScenario, teleport]);
-};
+    taskSkyDive: [];
 
-mp.Player.prototype.taskStartScenarioInPlace = function (scenarioName: string, unkDelay: number, playEnterAnim: boolean) {
-    this.call("client::task:taskStartScenarioInPlace", [scenarioName, unkDelay, playEnterAnim]);
-};
+    taskSlideToCoord: [x: number, y: number, z: number, heading: number, speed: number];
+    taskSlideToCoordHdgRate: [x: number, y: number, z: number, heading: number, speed: number, headingRate: number];
 
-mp.Player.prototype.taskStayInCover = function () {
-    this.call("client::task:taskStayInCover", []);
-};
+    taskSmartFlee: [target: number, distance: number, time: any, preferPavements: boolean, updateTarget: boolean];
+    taskSmartFleeCoord: [x: number, y: number, z: number, distance: number, time: number, preferPavements: boolean, quitIfOutOfRange: boolean];
 
-mp.Player.prototype.taskStealthKill = function (target: number, killType: number, p3: number, p4: boolean) {
-    this.call("client::task:taskStealthKill", [target, killType, p3, p4]);
-};
+    taskStandGuard: [x: number, y: number, z: number, heading: number, scenario: string];
+    taskStandStill: [duration: number];
 
-mp.Player.prototype.taskStopPhoneGestureAnimation = function () {
-    this.call("client::task:taskStopPhoneGestureAnimation", []);
-};
+    taskStartScenarioAtPosition: [scenario: string, x: number, y: number, z: number, heading: number, duration: number, sitting: boolean, teleport: boolean];
+    taskStartScenarioInPlace: [scenario: string, delay: number, playEnterAnim: boolean];
 
-mp.Player.prototype.taskSwapWeapon = function (p1: boolean) {
-    this.call("client::task:taskSwapWeapon", [p1]);
-};
+    taskStayInCover: [];
 
-mp.Player.prototype.taskSweepAim = function (anim: string, p2: string, p3: string, p4: string, p5: number, vehicle: number, p7: number, p8: number) {
-    this.call("client::task:taskSweepAim", [anim, p2, p3, p4, p5, vehicle, p7, p8]);
-};
+    taskStealthKill: [target: number, killType: number, p3: number, p4: boolean];
 
-mp.Player.prototype.taskSynchronizedScene = function (scene: number, animDictionary: string, animationName: string, speed: number, speedMultiplier: number, duration: number, flag: number, playbackRate: number, p9: any) {
-    this.call("client::task:taskSynchronizedScene", [scene, animDictionary, animationName, speed, speedMultiplier, duration, flag, playbackRate, p9]);
-};
+    taskStopPhoneGestureAnimation: [];
 
-mp.Player.prototype.taskTurnToFace = function (entity: number, duration: number) {
-    this.call("client::task:taskTurnToFace", [entity, duration]);
-};
+    taskSwapWeapon: [force: boolean];
 
-mp.Player.prototype.taskTurnToFaceCoord = function (x: number, y: number, z: number, duration: number) {
-    this.call("client::task:taskTurnToFaceCoord", [x, y, z, duration]);
-};
+    taskSweepAim: [anim: string, p2: string, p3: string, p4: string, duration: number, vehicle: number, p7: number, p8: number];
 
-mp.Player.prototype.taskUseMobilePhone = function (p1: number) {
-    this.call("client::task:taskUseMobilePhone", [p1]);
-};
+    taskSynchronizedScene: [scene: number, dict: string, name: string, speed: number, speedMult: number, duration: number, flag: number, playbackRate: number, p9: any];
 
-mp.Player.prototype.taskUseMobilePhoneTimed = function (duration: number) {
-    this.call("client::task:taskUseMobilePhoneTimed", [duration]);
-};
+    taskTurnToFace: [target: number, duration: number];
+    taskTurnToFaceCoord: [x: number, y: number, z: number, duration: number];
 
-mp.Player.prototype.taskUseNearestScenarioToCoordWarp = function (x: number, y: number, z: number, radius: number, p5: any) {
-    this.call("client::task:taskUseNearestScenarioToCoordWarp", [x, y, z, radius, p5]);
-};
+    taskUseMobilePhone: [mode: number];
+    taskUseMobilePhoneTimed: [duration: number];
 
-mp.Player.prototype.taskVehicleAimAt = function (target: number) {
-    this.call("client::task:taskVehicleAimAt", [target]);
-};
+    taskUseNearestScenarioToCoordWarp: [x: number, y: number, z: number, radius: number, p5: any];
 
-mp.Player.prototype.taskVehicleChase = function (targetEnt: number) {
-    this.call("client::task:taskVehicleChase", [targetEnt]);
-};
+    taskVehicleAimAt: [target: number];
+    taskVehicleChase: [target: number];
 
-mp.Player.prototype.taskVehicleDriveToCoord = function (vehicle: number, x: number, y: number, z: number, speed: number, p6: any, vehicleModel: number, drivingMode: number, stopRange: number, p10: number) {
-    this.call("client::task:taskVehicleDriveToCoord", [vehicle, x, y, z, speed, p6, vehicleModel, drivingMode, stopRange, p10]);
-};
+    taskVehicleDriveToCoord: [vehicle: number, x: number, y: number, z: number, speed: number, p6: any, model: number, drivingMode: number, stopRange: number, p10: number];
+    taskVehicleDriveToCoordLongrange: [vehicle: number, x: number, y: number, z: number, speed: number, drivingMode: number, stopRange: number];
 
-mp.Player.prototype.taskVehicleDriveToCoordLongrange = function (vehicle: number, x: number, y: number, z: number, speed: number, driveMode: number, stopRange: number) {
-    this.call("client::task:taskVehicleDriveToCoordLongrange", [vehicle, x, y, z, speed, driveMode, stopRange]);
-};
+    taskVehicleDriveWander: [vehicle: number, speed: number, drivingStyle: number];
 
-mp.Player.prototype.taskVehicleDriveWander = function (vehicle: number, speed: number, drivingStyle: number) {
-    this.call("client::task:taskVehicleDriveWander", [vehicle, speed, drivingStyle]);
-};
+    taskVehicleEscort: [vehicle: number, targetVehicle: number, mode: number, speed: number, drivingStyle: number, minDistance: number, p7: number, noRoadsDistance: number];
 
-mp.Player.prototype.taskVehicleEscort = function (vehicle: number, targetVehicle: number, mode: number, speed: number, drivingStyle: number, minDistance: number, p7: number, noRoadsDistance: number) {
-    this.call("client::task:taskVehicleEscort", [vehicle, targetVehicle, mode, speed, drivingStyle, minDistance, p7, noRoadsDistance]);
-};
+    taskVehicleFollow: [vehicle: number, target: number, drivingStyle: number, speed: number, minDistance: number];
 
-mp.Player.prototype.taskVehicleFollow = function (vehicle: number, targetEntity: number, drivingStyle: number, speed: number, minDistance: number) {
-    this.call("client::task:taskVehicleFollow", [vehicle, targetEntity, drivingStyle, speed, minDistance]);
-};
+    taskVehicleFollowWaypointRecording: [vehicle: number, recording: string, p3: number, p4: number, p5: number, p6: number, p7: number, p8: boolean, p9: number];
 
-mp.Player.prototype.taskVehicleFollowWaypointRecording = function (vehicle: number, WPRecording: string, p3: number, p4: number, p5: number, p6: number, p7: number, p8: boolean, p9: number) {
-    this.call("client::task:taskVehicleFollowWaypointRecording", [vehicle, WPRecording, p3, p4, p5, p6, p7, p8, p9]);
-};
+    taskVehicleGotoNavmesh: [vehicle: number, x: number, y: number, z: number, speed: number, behavior: number, stoppingRange: number];
 
-mp.Player.prototype.taskVehicleGotoNavmesh = function (vehicle: number, x: number, y: number, z: number, speed: number, behaviorFlag: number, stoppingRange: number) {
-    this.call("client::task:taskVehicleGotoNavmesh", [vehicle, x, y, z, speed, behaviorFlag, stoppingRange]);
-};
+    taskVehicleHeliProtect: [vehicle: number, target: number, speed: number, p4: number, radius: number, altitude: number, p7: number];
 
-mp.Player.prototype.taskVehicleHeliProtect = function (vehicle: number, entityToFollow: number, targetSpeed: number, p4: number, radius: number, altitude: number, p7: number) {
-    this.call("client::task:taskVehicleHeliProtect", [vehicle, entityToFollow, targetSpeed, p4, radius, altitude, p7]);
-};
+    taskVehicleMissionCoorsTarget: [vehicle: number, x: number, y: number, z: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: boolean];
 
-mp.Player.prototype.taskVehicleMissionCoorsTarget = function (vehicle: number, x: number, y: number, z: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: boolean) {
-    this.call("client::task:taskVehicleMissionCoorsTarget", [vehicle, x, y, z, p5, p6, p7, p8, p9, p10]);
-};
+    taskVehicleMissionTarget: [vehicle: number, target: number, mode: number, maxSpeed: number, drivingStyle: number, minDistance: number, p7: number, p8: boolean];
 
-mp.Player.prototype.taskVehicleMissionTarget = function (vehicle: number, pedTarget: number, mode: number, maxSpeed: number, drivingStyle: number, minDistance: number, p7: number, p8: boolean) {
-    this.call("client::task:taskVehicleMissionTarget", [vehicle, pedTarget, mode, maxSpeed, drivingStyle, minDistance, p7, p8]);
-};
+    taskVehiclePark: [vehicle: number, x: number, y: number, z: number, heading: number, mode: number, radius: number, keepEngineOn: boolean];
 
-mp.Player.prototype.taskVehiclePark = function (vehicle: number, x: number, y: number, z: number, heading: number, mode: number, radius: number, keepEngineOn: boolean) {
-    this.call("client::task:taskVehiclePark", [vehicle, x, y, z, heading, mode, radius, keepEngineOn]);
-};
+    taskVehicleTempAction: [vehicle: number, action: number, duration: number];
 
-mp.Player.prototype.taskVehicleTempAction = function (vehicle: number, action: number, time: number) {
-    this.call("client::task:taskVehicleTempAction", [vehicle, action, time]);
-};
+    taskWanderInArea: [x: number, y: number, z: number, radius: number, minLength: number, timeBetween: number];
+    taskWanderStandard: [p1: number, p2: number];
 
-mp.Player.prototype.taskWanderInArea = function (x: number, y: number, z: number, radius: number, minimalLength: number, timeBetweenWalks: number) {
-    this.call("client::task:taskWanderInArea", [x, y, z, radius, minimalLength, timeBetweenWalks]);
-};
+    taskWarpIntoVehicle: [vehicle: number, seat: number];
 
-mp.Player.prototype.taskWanderStandard = function (p1: number, p2: number) {
-    this.call("client::task:taskWanderStandard", [p1, p2]);
-};
+    taskWrithe: [target: number, time: number, p3: number];
 
-mp.Player.prototype.taskWarpIntoVehicle = function (vehicle: number, seat: number) {
-    this.call("client::task:taskWarpIntoVehicle", [vehicle, seat]);
-};
+    uncuff: [];
 
-mp.Player.prototype.taskWrithe = function (target: number, time: number, p3: number) {
-    this.call("client::task:taskWrithe", [target, time, p3]);
+    updateTaskAimGunScriptedTarget: [p1: number, p2: number, p3: number, p4: number, p5: boolean];
+    updateTaskHandsUpDuration: [duration: number];
 };
-
-mp.Player.prototype.uncuff = function () {
-    this.call("client::task:uncuff", []);
+type TaskCaller = {
+    [K in keyof TaskMap]: (...args: TaskMap[K]) => void;
 };
 
-mp.Player.prototype.updateTaskAimGunScriptedTarget = function (p1: number, p2: number, p3: number, p4: number, p5: boolean) {
-    this.call("client::task:updateTaskAimGunScriptedTarget", [p1, p2, p3, p4, p5]);
-};
+function createTaskProxy(player: PlayerMp): TaskCaller {
+    return new Proxy({} as TaskCaller, {
+        get(_, taskName: string) {
+            return (...args: any[]) => {
+                player.call(`client::task:${taskName}`, args);
+            };
+        }
+    });
+}
 
-mp.Player.prototype.updateTaskHandsUpDuration = function (duration: number) {
-    this.call("client::task:updateTaskHandsUpDuration", [duration]);
-};
+Object.defineProperty(mp.Player.prototype, "task", {
+    get: function () {
+        if (!this._taskProxy) {
+            this._taskProxy = createTaskProxy(this);
+        }
+        return this._taskProxy;
+    }
+});
